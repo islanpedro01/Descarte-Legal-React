@@ -54,7 +54,7 @@ export default function Carousel() {
   };
 
   return (
-    <div ref={slideRef} className="w-full select-none relative z-50 ">
+    <div ref={slideRef} className="w-full select-none relative z-40 ">
       <div className="aspect-w-16 aspect-h-9">
         <img src={featuredProducts[currentIndex]} alt="" className="rounded-lg mt-0"/>
       </div>
