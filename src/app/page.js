@@ -1,113 +1,131 @@
-import Image from 'next/image'
+import NavBar from './models/navBar'
+import Footer from './models/footer'
+import Cards from './models/cards'
+import App from './models/app'
+import Carousel from './models/carousel'
+import Typewriter from './models/type'
+
+
+
+
 
 export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    return (
+      <>
+    {/* Nav bar */}
+      <NavBar />   
+    {/* Nav Bar End */}
+    {/* Main Section Start*/}
+    <main className="">
+      {/* Hero Section Start */}
+      <div className=" bg-white sm:pt-[120px] pt-[30px] sm:pb-[110px] lg:pt-[150px]">
+        <div className="container mx-auto ">
+          <div className="-mx-4 flex flex-wrap">
+            <div className="w-full px-4 lg:w-5/12">
+              <div className="hero-content">
+                <h1 className="mb-3 text-4xl font-bold leading-snug text-dark sm:text-[42px] lg:text-[40px] xl:text-[42px]">
+                  <p className=""> Informe-se</p>
+                  <p className="text-center"> Denuncie</p>
+                  <p className='text-right'> <Typewriter text="Descarte!" delay={350} infinite/> </p>
+                </h1>
+                <p className="mb-8 max-w-[480px] text-base text-body-color">
+                  Com o Descarte Legal, construtoras, prefeitura e população
+                  trabalham juntos por uma cidade mais limpa. Ajude-nos a limpar
+                  nossa cidade e:
+                </p>
+                <App />
+              </div>
+              <div
+                className="p-1 transition hidden overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center"
+                id="modal-id"
+              >
+                <div className="relative w-full my-6 mx-auto max-w-3xl">
+                  <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none ">
+                    <div className="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
+                      <App/>
+                    </div>
+                    {/* Formulario Section Start */}
+                    
+                    {/* Form Section end */}
+                    <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
+                      <button
+                        className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                        type="button"
+                        onclick="toggleModal('modal-id')"
+                      >
+                        Close
+                      </button>
+                      <button
+                        className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center "
+                        type="submit"
+                      >
+                        Submit
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="hidden opacity-25 fixed inset-0 z-40 bg-black"
+                id="modal-id-backdrop"
+              />
+            </div>
+            <div className="hidden px-4 lg:block lg:w-1/12" />
+            <div className="w-full px-4 lg:w-6/12">
+                <Carousel/>          
+              <div className="relative z-10 inline-block pt-11 lg:pt-0">
+                <span className="absolute -left-8 -bottom-8 z-[-1]">
+                  <svg
+                    width={93}
+                    height={93}
+                    viewBox="0 0 93 93"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="invisible md:visible "
+                  >
+                    <circle cx="2.5" cy="2.5" r="2.5" fill="#75A488" />
+                    <circle cx="2.5" cy="24.5" r="2.5" fill="#75A488" />
+                    <circle cx="2.5" cy="46.5" r="2.5" fill="#75A488" />
+                    <circle cx="2.5" cy="68.5" r="2.5" fill="#75A488" />
+                    <circle cx="2.5" cy="90.5" r="2.5" fill="#75A488" />
+                    <circle cx="24.5" cy="2.5" r="2.5" fill="#75A488" />
+                    <circle cx="24.5" cy="24.5" r="2.5" fill="#75A488" />
+                    <circle cx="24.5" cy="46.5" r="2.5" fill="#75A488" />
+                    <circle cx="24.5" cy="68.5" r="2.5" fill="#75A488" />
+                    <circle cx="24.5" cy="90.5" r="2.5" fill="#75A488" />
+                    <circle cx="46.5" cy="2.5" r="2.5" fill="#75A488" />
+                    <circle cx="46.5" cy="24.5" r="2.5" fill="#75A488" />
+                    <circle cx="46.5" cy="46.5" r="2.5" fill="#75A488" />
+                    <circle cx="46.5" cy="68.5" r="2.5" fill="#75A488" />
+                    <circle cx="46.5" cy="90.5" r="2.5" fill="#75A488" />
+                    <circle cx="68.5" cy="2.5" r="2.5" fill="#75A488" />
+                    <circle cx="68.5" cy="24.5" r="2.5" fill="#75A488" />
+                    <circle cx="68.5" cy="46.5" r="2.5" fill="#75A488" />
+                    <circle cx="68.5" cy="68.5" r="2.5" fill="#75A488" />
+                    <circle cx="68.5" cy="90.5" r="2.5" fill="#75A488" />
+                    <circle cx="90.5" cy="2.5" r="2.5" fill="#75A488" />
+                    <circle cx="90.5" cy="24.5" r="2.5" fill="#75A488" />
+                    <circle cx="90.5" cy="46.5" r="2.5" fill="#75A488" />
+                    <circle cx="90.5" cy="68.5" r="2.5" fill="#75A488" />
+                    <circle cx="90.5" cy="90.5" r="2.5" fill="#75A488" />
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      {/* Hero Section End */}
+      <div className="cards bg-white justify-center grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3">
+        <Cards/>
+        </div>
     </main>
-  )
+    {/* Main Section End */}
+    {/* Footer Section Start */}
+    <Footer/>
+    {/* Footer Section End */}
+  </>
+
+    )
+
 }

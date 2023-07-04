@@ -1,0 +1,59 @@
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0,);
+  }
+  .modal-content {
+    border: 1px solid white;
+    border-radius: 1rem;
+    background-color: rgba(117, 164, 136, 0.966);
+  }
+  .btn {
+    text-align: right;
+  }
+  
+  .modal-popup {
+    position: absolute;
+    max-width: 500px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .modal-popup .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+   .modal-content h2 {
+    margin-top: 0;
+    margin-left: 10;
+  }
+  
+  .cursor {
+    display: inline-block;
+    animation: blink 0.7s infinite;
+  }
+  
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  
