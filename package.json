@@ -2,6 +2,7 @@
   "name": "descarte-legal",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://Rafael-Max.github.io/DescarteLegal-React",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -22,5 +23,4 @@
   "devDependencies": {
     "gh-pages": "^5.0.0"
   }
-  "homepage": "https://Rafael-Max.github.io/Descarte-Legal-React",
 }
