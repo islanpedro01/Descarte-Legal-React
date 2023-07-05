@@ -3,7 +3,6 @@ import Footer from './models/footer'
 import Cards from './models/cards'
 import App from './models/app'
 import Carousel from './models/carousel'
-import Typewriter from './models/type'
 
 
 
@@ -26,7 +25,7 @@ export default function Home() {
                 <h1 className="mb-3 text-4xl font-bold leading-snug text-dark sm:text-[42px] lg:text-[40px] xl:text-[42px]">
                   <p className=""> Informe-se</p>
                   <p className="text-center"> Denuncie</p>
-                  <p className='text-right'> <Typewriter text="Descarte!" delay={350} infinite/> </p>
+                  <p className='text-right text-musgo'> Descarte! </p>
                 </h1>
                 <p className="mb-8 max-w-[480px] text-base text-body-color">
                   Com o Descarte Legal, construtoras, prefeitura e população
